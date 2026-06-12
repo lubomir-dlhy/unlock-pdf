@@ -1,0 +1,46 @@
+appId: com.dlhyl.unlockpdf
+# Captures App Store screenshots. Run with:
+#   maestro test -e OUT=light .maestro/screenshots.yaml
+# Requires Invoice-2026.pdf seeded into the simulator Files app (password demo1234).
+# Note: text injected into a secureTextEntry field never renders, so the flow
+# taps the show-password eye (by coordinates - SymbolView is not accessible)
+# before typing.
+---
+- launchApp:
+    stopApp: true
+    clearState: true
+- extendedWaitUntil:
+    visible: '.*Choose a PDF.*'
+    timeout: 10000
+- takeScreenshot: assets/screenshots/raw/${OUT}-01-home
+- tapOn: '.*Choose a PDF.*'
+- extendedWaitUntil:
+    visible: '.*Recents.*|.*Browse.*|.*Invoice-2026.*'
+    timeout: 10000
+- runFlow:
+    when:
+      notVisible: '.*Invoice-2026.*'
+    commands:
+      - tapOn: 'Browse'
+      - tapOn: 'On My iPhone'
+- extendedWaitUntil:
+    visible: '.*Invoice-2026.*'
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: '.*Invoice-2026, pdf.*'
+- extendedWaitUntil:
+    visible: '.*PDF password.*'
+    timeout: 10000
+- tapOn:
+    point: '88%, 44%'
+- tapOn: '.*PDF password.*'
+- inputText: 'demo1234'
+- waitForAnimationToEnd:
+    timeout: 2000
+- takeScreenshot: assets/screenshots/raw/${OUT}-02-ready
+- pressKey: Enter
+- extendedWaitUntil:
+    visible: '.*PDF unlocked.*'
+    timeout: 15000
+- takeScreenshot: assets/screenshots/raw/${OUT}-03-done

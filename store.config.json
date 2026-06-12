@@ -1,0 +1,67 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "version": "1.0.0",
+    "copyright": "2026 Lubomir Dlhy",
+    "categories": ["UTILITIES", "PRODUCTIVITY"],
+    "info": {
+      "en-US": {
+        "title": "Unlock PDF",
+        "subtitle": "Remove PDF passwords offline",
+        "description": "Unlock PDF removes the password from protected PDF files - entirely on your iPhone.\n\nPick a locked PDF, enter its password once, and save or share an unlocked copy that opens anywhere without a password prompt.\n\nWHY UNLOCK PDF\n\n- 100% offline: your files and passwords never leave your device\n- No accounts, no subscriptions, no ads\n- Fast: unlocks most documents in under a second\n- Works with the Files app, iCloud Drive, and any document provider\n- Share or save the unlocked copy anywhere with the share sheet\n- Native iOS design with full dark mode support\n\nPRIVACY FIRST\n\nUnlike online PDF unlockers, Unlock PDF does all processing locally. Nothing is uploaded, tracked, or collected. The app works in airplane mode.\n\nNote: you need to know the password of the PDF - this app removes the password protection from documents you can already open, it does not crack or bypass unknown passwords.",
+        "keywords": [
+          "pdf",
+          "unlock",
+          "password",
+          "remove",
+          "decrypt",
+          "protected",
+          "offline",
+          "document",
+          "files",
+          "privacy"
+        ],
+        "releaseNotes": "Initial release.",
+        "supportUrl": "https://github.com/lubomir-dlhy/unlock-pdf#support",
+        "privacyPolicyUrl": "https://github.com/lubomir-dlhy/unlock-pdf/blob/main/PRIVACY.md",
+        "screenshots": {
+          "APP_IPHONE_67": [
+            "./assets/screenshots/raw/light-01-home.png",
+            "./assets/screenshots/raw/light-02-ready.png",
+            "./assets/screenshots/raw/light-03-done.png",
+            "./assets/screenshots/raw/dark-01-home.png",
+            "./assets/screenshots/raw/dark-02-ready.png",
+            "./assets/screenshots/raw/dark-03-done.png"
+          ]
+        }
+      }
+    },
+    "advisory": {
+      "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+      "contests": "NONE",
+      "gamblingSimulated": "NONE",
+      "medicalOrTreatmentInformation": "NONE",
+      "profanityOrCrudeHumor": "NONE",
+      "sexualContentGraphicAndNudity": "NONE",
+      "sexualContentOrNudity": "NONE",
+      "horrorOrFearThemes": "NONE",
+      "matureOrSuggestiveThemes": "NONE",
+      "violenceCartoonOrFantasy": "NONE",
+      "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+      "violenceRealistic": "NONE",
+      "unrestrictedWebAccess": false,
+      "gambling": false
+    },
+    "release": {
+      "automaticRelease": true
+    },
+    "review": {
+      "firstName": "Lubomir",
+      "lastName": "Dlhy",
+      "email": "dlhylubomir@gmail.com",
+      "phone": "+421950896645",
+      "demoRequired": false,
+      "notes": "The app removes password protection from PDF files locally on device. To test: tap 'Choose a PDF', select any password-protected PDF, enter its password, tap 'Unlock PDF'. No account or network connection is needed."
+    }
+  }
+}

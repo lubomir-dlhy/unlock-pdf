@@ -46,3 +46,10 @@ src/
   this is not a password cracker.
 - Wrong passwords and already-unprotected PDFs are reported with clear
   error messages in the UI.
+
+## Support
+
+Having trouble with Unlock PDF? [Open an issue](https://github.com/lubomir-dlhy/unlock-pdf/issues)
+or email <dlhylubomir@gmail.com>.
+
+Privacy policy: [PRIVACY.md](PRIVACY.md) — the app collects no data at all.
