@@ -6,7 +6,7 @@
     "categories": ["UTILITIES", "PRODUCTIVITY"],
     "info": {
       "en-US": {
-        "title": "Unlock PDF",
+        "title": "Unlock PDF – Password Remover",
         "subtitle": "Remove PDF passwords offline",
         "description": "Unlock PDF removes the password from protected PDF files - entirely on your iPhone.\n\nPick a locked PDF, enter its password once, and save or share an unlocked copy that opens anywhere without a password prompt.\n\nWHY UNLOCK PDF\n\n- 100% offline: your files and passwords never leave your device\n- No accounts, no subscriptions, no ads\n- Fast: unlocks most documents in under a second\n- Works with the Files app, iCloud Drive, and any document provider\n- Share or save the unlocked copy anywhere with the share sheet\n- Native iOS design with full dark mode support\n\nPRIVACY FIRST\n\nUnlike online PDF unlockers, Unlock PDF does all processing locally. Nothing is uploaded, tracked, or collected. The app works in airplane mode.\n\nNote: you need to know the password of the PDF - this app removes the password protection from documents you can already open, it does not crack or bypass unknown passwords.",
         "keywords": [
@@ -50,7 +50,10 @@
       "violenceRealisticProlongedGraphicOrSadistic": "NONE",
       "violenceRealistic": "NONE",
       "unrestrictedWebAccess": false,
-      "gambling": false
+      "gambling": false,
+      "kidsAgeBand": null,
+      "ageRatingOverride": "NONE",
+      "koreaAgeRatingOverride": "NONE"
     },
     "release": {
       "automaticRelease": true
