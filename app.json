@@ -1,16 +1,21 @@
 {
   "expo": {
     "name": "Unlock PDF",
-    "slug": "unlock-pdf",
+    "slug": "unlock-pdf-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon.png",
     "scheme": "unlockpdf",
     "userInterfaceStyle": "automatic",
-    "platforms": ["ios"],
+    "platforms": [
+      "ios"
+    ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.example.unlockpdf"
+      "bundleIdentifier": "com.dlhyl.unlockpdf",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "plugins": [
       "expo-router",
@@ -29,6 +34,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "4b7f6400-e960-41e7-9fc4-8e1427975ade"
+      }
+    },
+    "owner": "dlhyl"
   }
 }
