@@ -1,14 +1,14 @@
 {
   "configVersion": 0,
   "apple": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "copyright": "2026 Lubomir Dlhy",
     "categories": ["UTILITIES", "PRODUCTIVITY"],
     "info": {
       "en-US": {
         "title": "Unlock PDF – Password Remover",
         "subtitle": "Remove PDF passwords offline",
-        "description": "Unlock PDF removes the password from protected PDF files - entirely on your iPhone.\n\nPick a locked PDF, enter its password once, and save or share an unlocked copy that opens anywhere without a password prompt.\n\nWHY UNLOCK PDF\n\n- 100% offline: your files and passwords never leave your device\n- No accounts, no subscriptions, no ads\n- Fast: unlocks most documents in under a second\n- Works with the Files app, iCloud Drive, and any document provider\n- Share or save the unlocked copy anywhere with the share sheet\n- Native iOS design with full dark mode support\n\nPRIVACY FIRST\n\nUnlike online PDF unlockers, Unlock PDF does all processing locally. Nothing is uploaded, tracked, or collected. The app works in airplane mode.\n\nNote: you need to know the password of the PDF - this app removes the password protection from documents you can already open, it does not crack or bypass unknown passwords.",
+        "description": "Unlock PDF removes the password from protected PDF files - entirely on your iPhone.\n\nPick a locked PDF, enter its password once, and save or share an unlocked copy that opens anywhere without a password prompt.\n\nWHY UNLOCK PDF\n\n- 100% offline: your files and passwords never leave your device\n- No accounts, no subscriptions, no ads\n- Fast: unlocks most documents in under a second\n- Works with the Files app, iCloud Drive, and any document provider\n- Unlock straight from Mail or any app: tap Share → Unlock PDF\n- Share or save the unlocked copy anywhere with the share sheet\n- Native iOS design with full dark mode support\n\nPRIVACY FIRST\n\nUnlike online PDF unlockers, Unlock PDF does all processing locally. Nothing is uploaded, tracked, or collected. The app works in airplane mode.\n\nNote: you need to know the password of the PDF - this app removes the password protection from documents you can already open, it does not crack or bypass unknown passwords.",
         "keywords": [
           "pdf",
           "unlock",
@@ -21,7 +21,7 @@
           "files",
           "privacy"
         ],
-        "releaseNotes": "Initial release.",
+        "releaseNotes": "Unlock PDFs straight from the Share Sheet: in Mail, Files, Safari or any other app, tap Share → Unlock PDF, enter the password, and you're done. No need to save the file to Files first.",
         "supportUrl": "https://github.com/lubomir-dlhy/unlock-pdf#support",
         "privacyPolicyUrl": "https://github.com/lubomir-dlhy/unlock-pdf/blob/main/PRIVACY.md",
         "screenshots": {
@@ -64,7 +64,7 @@
       "email": "dlhylubomir@gmail.com",
       "phone": "+421950896645",
       "demoRequired": false,
-      "notes": "The app removes password protection from PDF files locally on device. To test: tap 'Choose a PDF', select any password-protected PDF, enter its password, tap 'Unlock PDF'. No account or network connection is needed."
+      "notes": "The app removes password protection from PDF files locally on device. To test: tap 'Choose a PDF', select any password-protected PDF, enter its password, tap 'Unlock PDF'. Alternatively, share a password-protected PDF from Files or Mail and choose 'Unlock PDF' in the Share Sheet; the app opens with the file already selected. No account or network connection is needed."
     }
   }
 }

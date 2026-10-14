@@ -1,0 +1,57 @@
+appId: com.dlhyl.unlockpdf
+# Exercises the Share Sheet import: Files → Share → Unlock PDF → unlock.
+# Run with: maestro test .maestro/share-sheet.yaml
+# Requires a Release build of the app (the dev client launcher intercepts the
+# hand-off) and Invoice-2026.pdf seeded via scripts/seed-simulator-pdf.sh.
+# Taps use coordinates (iPhone 17): Maestro can't reliably resolve text in the
+# Files context menu and Share Sheet, or in the app right after the hand-off.
+---
+- launchApp:
+    stopApp: true
+    clearState: true
+- launchApp:
+    appId: com.apple.DocumentsApp
+- runFlow:
+    when:
+      visible: 'Browse'
+    commands:
+      - tapOn: 'Browse'
+- runFlow:
+    when:
+      visible: 'On My iPhone'
+    commands:
+      - tapOn: 'On My iPhone'
+- extendedWaitUntil:
+    visible: '.*Invoice-2026.*'
+    timeout: 10000
+- longPressOn:
+    point: '18%,27%'
+- waitForAnimationToEnd:
+    timeout: 5000
+- takeScreenshot: docs/share-sheet/1-share-menu
+- tapOn:
+    point: '59%,38%'
+- waitForAnimationToEnd:
+    timeout: 5000
+- takeScreenshot: docs/share-sheet/2-share-sheet
+- tapOn:
+    point: '17%,49%'
+# Fixed delay: the app-switch animation isn't detected as one.
+- extendedWaitUntil:
+    visible: 'never-shown'
+    timeout: 4000
+    optional: true
+- takeScreenshot: docs/share-sheet/3-file-received
+- tapOn:
+    point: '88%,61%'
+- tapOn:
+    point: '45%,61%'
+- inputText: 'demo1234'
+- waitForAnimationToEnd:
+    timeout: 2000
+- takeScreenshot: docs/share-sheet/4-enter-password
+- pressKey: Enter
+- extendedWaitUntil:
+    visible: '.*PDF unlocked.*'
+    timeout: 15000
+- takeScreenshot: docs/share-sheet/5-unlocked
