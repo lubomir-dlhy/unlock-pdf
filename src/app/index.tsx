@@ -1,9 +1,10 @@
 import * as DocumentPicker from 'expo-document-picker';
 import * as Sharing from 'expo-sharing';
 import { SymbolView } from 'expo-symbols';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
+  AppState,
   Keyboard,
   KeyboardAvoidingView,
   Pressable,
@@ -36,6 +37,26 @@ export default function UnlockScreen() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [status, setStatus] = useState<Status>({ kind: 'idle' });
+
+  useEffect(() => {
+    const receiveSharedPdf = () => {
+      const payloads = Sharing.getSharedPayloads();
+      if (payloads.length === 0) return;
+      Sharing.clearSharedPayloads();
+      const pdf = payloads.find(
+        (payload) => payload.shareType === 'file' && payload.mimeType === 'application/pdf',
+      );
+      if (!pdf) return;
+      setFile({ uri: pdf.value, name: decodeURIComponent(pdf.value.split('/').pop() ?? '') });
+      setPassword('');
+      setStatus({ kind: 'idle' });
+    };
+    receiveSharedPdf();
+    const subscription = AppState.addEventListener('change', (state) => {
+      if (state === 'active') receiveSharedPdf();
+    });
+    return () => subscription.remove();
+  }, []);
 
   const pickFile = useCallback(async () => {
     const picked = await DocumentPicker.getDocumentAsync({

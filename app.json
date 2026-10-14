@@ -2,7 +2,7 @@
   "expo": {
     "name": "Unlock PDF",
     "slug": "unlock-pdf-app",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon.png",
     "scheme": "unlockpdf",
@@ -29,7 +29,16 @@
           }
         }
       ],
-      "expo-sharing"
+      "./plugins/with-share-extension-name",
+      [
+        "expo-sharing",
+        {
+          "ios": {
+            "enabled": true,
+            "activationRule": "SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO \"com.adobe.pdf\").@count == 1).@count == 1"
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
